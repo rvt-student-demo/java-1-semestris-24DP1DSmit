@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-
+        System.out.println("Enter password: ");
         Scanner scanner = new Scanner(System.in);
+        scanner.close();
 
-        System.out.println("Ieraksti pirmo skiatli:");
-        int pirm_sk = Integer.valueOf(scanner.nextLine());
-        
-        System.out.println("Ieraksti pirmo skiatli:");
-        int otr_sk = Integer.valueOf(scanner.nextLine());
+        String atb = String.valueOf(scanner.nextLine());
 
-        int atb = pirm_sk + otr_sk;
 
-        System.out.println(pirm_sk + " + " + otr_sk + " = " + atb);
+        String password = "Caput Draconis";
+
+        if (password = atb) {
+            System.out.println("Welcome!");
+        }else{
+            System.out.println("Off with you!");
+        }
     }
 }
