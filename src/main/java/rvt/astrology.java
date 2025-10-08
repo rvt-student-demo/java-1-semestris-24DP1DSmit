@@ -4,20 +4,17 @@ import java.util.Scanner;
 
 public class astrology {
     public static void main(String[] args) {
-        printStars(2);
+        triangle(4);
     }
 
     public static void triangle(int number) {
-
+        for (int i = 0; i < number; i++) {
+            
+        }
     }
 
-    public static void printStars(int x) {
-        for (int i = 0; i < 10; i++) {
-            for (int y = 0; y < 4; y++) {
-                System.out.print('*');
-            }
-            System.out.println();
-}
+    public static void cristmasTree(int x) {
+      
 
     }
 }
