@@ -26,8 +26,6 @@ public class dbt {
             max--;
         }
 
-        int i = 0;
-
         System.out.println(min);
         while (true) {
             min = min + 3;
