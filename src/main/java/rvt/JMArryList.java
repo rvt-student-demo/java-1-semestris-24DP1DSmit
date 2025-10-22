@@ -4,7 +4,18 @@ import java.util.*;
 
 public class JMArryList {
     public static void main(String[] args){
+        ArrayList<String> strings = new ArrayList<>();
 
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
+
+        System.out.println(strings);
+
+        removeLast(strings);
+        removeLast(strings);
+
+        System.out.println(strings);
     }
 
     public static void onlyTWheseNumbers(){
@@ -12,7 +23,7 @@ public class JMArryList {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         while (true) {
-            int num = Integer.parseInt(scanner.nextLine());
+            int num = Integer(scanner.nextLine());
             if (num == -1) {
                 break;
             }
@@ -20,10 +31,10 @@ public class JMArryList {
         }
 
         System.out.print("From where? ");
-        int start = Integer.parseInt(scanner.nextLine());
+        int start = Integer.valueOf(scanner.nextLine());
 
         System.out.print("To where? ");
-        int end = Integer.parseInt(scanner.nextLine());
+        int end = Integer.valueOf(scanner.nextLine());
 
         for (int i = start; i <= end; i++) {
             System.out.println(numbers.get(i));
@@ -70,20 +81,6 @@ public class JMArryList {
         }
 
         scanner.close();
-    }
-    public static void removeLast(ArrayList<String> strings){
-        ArrayList<String> strings = new ArrayList<>();
-
-        strings.add("First");
-        strings.add("Second");
-        strings.add("Third");
-
-        System.out.println(strings);
-
-        removeLast(strings);
-        removeLast(strings);
-
-        System.out.println(strings);
     }
 
     public static void removeLast(ArrayList<String> strings) {
