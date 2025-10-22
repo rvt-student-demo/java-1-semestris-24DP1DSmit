@@ -1,3 +1,5 @@
+package main.java.rvt;
+
 import java.util.*;
 
 public class JMArryList {
