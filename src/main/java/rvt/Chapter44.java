@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Chapter44 {
 
     public static void main(String[] args) {
-
-        ex2();
+        ex3();
     }
 
     public static void ex1() {
@@ -33,6 +32,29 @@ public class Chapter44 {
     }
 
     public static void ex3() {
+        Scanner scanner = new Scanner(System.in);
+        String[] fem = { "Amy", "Buffy", "Cathy" };
+        String[] mus = { "Elroy", "Fred", "Graham" };
+        while (true) {
+            System.out.println("Ievadiet vārdu: ");
+            String vards = String.valueOf(scanner.nextLine());
+            if (vards == "") {
+                break;
+            }
+            for (int i = 0; i < fem.length; i++) {
+                if (vards.startsWith(fem[i])) {
+                    vards = "Ms. "+vards ;
+                }
+            }
+            for (int j = 0; j < mus.length; j++) {
+                if (vards.startsWith(mus[j])) {
+                    vards = "Mr. "+vards;
+                }
+            }
+            System.out.println(vards);
+
+        }
+        scanner.close();
 
     }
 
