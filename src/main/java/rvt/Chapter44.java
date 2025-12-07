@@ -61,10 +61,15 @@ public class Chapter44 {
     public static void ex4() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ievadiet laiku: ");
-        String vards = String.valueOf(scanner.nextLine());
-        
-
-        System.out.println(vards);
+        String laiks = String.valueOf(scanner.nextLine());
+        if (laiks.length() == 2) {
+            System.out.println("0:" + laiks);
+        } else {
+            Integer more = laiks.length() - 2;
+            String minutes = laiks.substring(0, more);
+            String sekundes = laiks.substring(more);
+            System.out.println(minutes + ":" + sekundes);
+        }
     }
 
     public static void ex5() {
