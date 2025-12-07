@@ -1,11 +1,12 @@
 package main.java.rvt;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Chapter44 {
 
     public static void main(String[] args) {
-        ex4();
+        ex5();
     }
 
     public static void ex1() {
@@ -43,12 +44,12 @@ public class Chapter44 {
             }
             for (int i = 0; i < fem.length; i++) {
                 if (vards.startsWith(fem[i])) {
-                    vards = "Ms. "+vards ;
+                    vards = "Ms. " + vards;
                 }
             }
             for (int j = 0; j < mus.length; j++) {
                 if (vards.startsWith(mus[j])) {
-                    vards = "Mr. "+vards;
+                    vards = "Mr. " + vards;
                 }
             }
             System.out.println(vards);
@@ -62,6 +63,7 @@ public class Chapter44 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ievadiet laiku: ");
         String laiks = String.valueOf(scanner.nextLine());
+        scanner.close();
         if (laiks.length() == 2) {
             System.out.println("0:" + laiks);
         } else {
@@ -73,7 +75,13 @@ public class Chapter44 {
     }
 
     public static void ex5() {
-
+        File fails = new File("Hello.txt");
+        Scanner scanner = new Scanner(fails);
+        while (scanner.hasNextLine()) {
+            String data = scanner.nextLine();
+            System.out.println(data);
+        }
+        scanner.close();
     }
 
     public static void ex6() {
