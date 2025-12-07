@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Chapter44 {
 
     public static void main(String[] args) {
-        ex5();
+        ex6();
     }
 
     public static void ex1() {
@@ -85,7 +85,31 @@ public class Chapter44 {
     }
 
     public static void ex6() {
+        Scanner scanner = new Scanner(System.in);
+        String[] nums = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        System.out.println("Ievadiet paroli: ");
+        while (true) {
+            Boolean con1 = false;
+            Boolean con2 = false;
+            Boolean con3 = false;
+            String parole = String.valueOf(scanner.nextLine());
+            Integer len = parole.length();
+            if (len >= 7) {
+                con1 = true;
+            }
 
+            // for (int j = 0; j < len; j++) {
+            //     for (int i = 0; i < nums.length; i++) {
+            //         if (parole.substring(j, j + 1) == nums[i]) {
+            //             System.out.println("Y");
+            //         }
+            //     }
+            // }
+
+            
+            break;
+        }
+        scanner.close();
     }
 
     public static void ex7() {
