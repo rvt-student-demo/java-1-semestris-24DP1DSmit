@@ -92,22 +92,53 @@ public class Chapter44 {
             Boolean con1 = false;
             Boolean con2 = false;
             Boolean con3 = false;
+            Boolean con4 = false;
             String parole = String.valueOf(scanner.nextLine());
             Integer len = parole.length();
+            String simb = "";
+            String simb2 = "";
             if (len >= 7) {
                 con1 = true;
+                System.out.println("Ir garums");
             }
 
-            // for (int j = 0; j < len; j++) {
-            //     for (int i = 0; i < nums.length; i++) {
-            //         if (parole.substring(j, j + 1) == nums[i]) {
-            //             System.out.println("Y");
-            //         }
-            //     }
-            // }
+            for (int j = 0; j < len; j++) {
+                simb = parole.substring(j, j + 1);
+                for (int i = 0; i < nums.length; i++) {
+                    if (simb.equals(nums[i])) {
+                        System.out.println("Ir cipars");
+                        con2 = true;
+                        j = len;
+                    }
+                }
+            }
 
-            
-            break;
+            for (int i = 0; i < len; i++) {
+                simb = parole.substring(i, 1 + i);
+                simb2 = simb.toUpperCase();
+                if (simb.equals(simb2)) {
+                    System.out.println("Ir liels burts");
+                    con3 = true;
+                    i = len;
+                }
+            }
+
+            for (int i = 0; i < len; i++) {
+                simb = parole.substring(i, 1 + i);
+                simb2 = simb.toLowerCase();
+                if (simb.equals(simb2)) {
+                    System.out.println("Ir mazs burts");
+                    con4 = true;
+                    i = len;
+                }
+            }
+            if (con1 && con2 && con3 && con4) {
+                System.out.println("Parole derīga");
+                break;
+
+            } else {
+                System.out.println("Parole nederīga, mēģiniet vēlreiz");
+            }
         }
         scanner.close();
     }
