@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Chapter44 {
 
     public static void main(String[] args) {
-        ex6();
+        ex7();
     }
 
     public static void ex1() {
@@ -144,6 +144,32 @@ public class Chapter44 {
     }
 
     public static void ex7() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ievadiet vārdu: ");
+        String vards = String.valueOf(scanner.nextLine());
+        Integer len = vards.length();
+        Integer mid = len / 2;
+        
+        while (true) {
+            if (vards.length() % 2 != 0) {
+                break;
+            } else {
+                System.out.println("Ievadiet citu vārdu: ");
+                vards = String.valueOf(scanner.nextLine());
+            }
+        }
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        for (int i = 0; i < mid + 1; i++) {
+            System.out.println(vards);
+            String charakter = vards.substring(i, i + 1);
+            String charakter2 = vards.substring(len - i - 1, len - i);
+            vards = vards.replace(charakter, " ");
+            vards = vards.replace(charakter2, "");
+        }
+        scanner.close();
     }
 }
